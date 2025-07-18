@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="eng">
+<head>
+<title>forms</title>
+<meta charset="UTF-8">
+</head>
+<body style="background:yellow; color:black;">
+<form method="post">
+<fieldset>
+<legend>PERSONAL INFO:</legend>
+<table>
+<tr>
+<td style="padding-bottom:20px;"><label>First Name</label></td>
+<td  style="padding-bottom:20px;"><input type="text"  minlength="6" maxlength="15"name="firstname" placeholder="enter your name" required autofocus > (Max 15 chars)</td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Last Name</label></td>
+<td  style="padding-bottom:20px;"><input type="text" name="lastname" value="hii" placeholder="enter your name" readonly></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Email</label></td>
+<td  style="padding-bottom:20px;"><input type="email" value="abcd@gmail.com" disabled></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Date of Birth</label></td>
+<td  style="padding-bottom:20px;"><input type="date"></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Time</label></td>
+<td  style="padding-bottom:20px;"><input type="time"></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Week</label></td> 
+<td  style="padding-bottom:20px;"><input type="week";></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label> Phone Number</label></td>
+<td style="padding-bottom:20px;"><input type="number" size="10"></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Search</label></td>
+<td  style="padding-bottom:20px;"><input type="search"></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Image</label></td>
+<td> <img src="https://images.pexels.com/photos/414612/pexels-photo-414612.jpeg?cs=srgb&dl=pexels-souvenirpixels-414612.jpg&fm=jpg" alt="img" style="width:100px; height:100px;"></td>
+</tr>
+<tr>
+</tr>
+<td style="padding-bottom:20px;"><label>Password</label></td>
+<td style="padding-bottom:20px;"><input type="password" name="password" size="18" pattern="[A-Z]+" autocomplete>&nbsp;(Uppercase letters only)</td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Gender</label></td>
+<td>
+<input style="padding-bottom:20px;" type="radio" name="radio" name="gender" checked >Male
+<input type="radio" name="radio" name="gender">Female
+</td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>Select course</label></td>
+<td>
+<select multiple>
+<option value="html">html</option>
+<option value="css">css</option>
+<option value="js" selected
+>js</option>
+<option value="reactjs">reactjs</option>
+<option value="jquury">other</option>
+</select>
+</td>
+</tr>
+<tr>
+<td><label>Adderss</label></td>
+<td><textarea rows="6"></textarea></td>
+</tr>
+<tr>
+<td style="padding-bottom:20px;"><label>file upload</label></td>
+<td style="padding-bottom:20px;"><input type="file" name="file"></td>
+</tr>
+<tr>
+<td><label>Courses Apllied for</label></td></tr>
+<tr><td></td>
+<td><input type="checkbox">Python Fullstack</td></tr>
+<tr><td></td>
+<td><input type="checkbox">java Fullstack</td></tr>
+<tr><td></td>
+<tr><td></td>
+<td><input type="checkbox">Reactjs</td></tr>
+<tr><td></td>
+<td><input type="checkbox">datascience</td></tr>
+<tr><td></td>
+<td><input type="checkbox">others</td></tr>
+<tr><td></td>
+<td style="padding-bottom:40px;"></td></tr>
+<tr><td></td>
+</table>
+<center>
+<input type="submit" value="login">&emsp;
+<input type="reset" value="clear all"></center>
+</tr>
+</fieldset>
+</form>
+</body>
+</html>

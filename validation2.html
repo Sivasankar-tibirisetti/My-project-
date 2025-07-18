@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js-functions</title>
+    <style>
+        span
+        {
+            color: red;
+            display: none;
+        }
+    </style>
+</head>
+<body >
+ <form action="" method="post">
+    user name<input type="text" name="uname" id="uname" onkeypress="myfun()">
+    <span id="x">please enter user name b/w 6 to 12 chars!</span><br>
+    password<input type="password" name="pwd" id="pwd" onkeypress="myfun()">
+    <span id="y">please enter password  b/w 6 to 12 chars!</span><br>
+    re-password<input type="password" name="rpwd" id="rpwd" onkeypress="myfun()">
+    <span id="z">password and re-password mismatch!</span><br>
+   <input type="submit" onclick="return valid()"><br>
+ </form>
+<script>
+    var x = document.getElementById("x");
+    var y = document.getElementById("y");
+    var z = document.getElementById("z");
+function valid()
+{
+    var user = document.getElementById("uname").value;
+    var pass = document.getElementById("pwd").value;
+    var rpass = document.getElementById("rpwd").value;
+    if(user.length<6 || user.length>12)
+        {
+            x.style.display="inline";
+            //document.getElementById("uname").style.border="2px solid orange"
+            return false;
+        }
+    else if(pass.length<6 || pass.length>12)
+        {
+            y.style.display="inline";
+            return false;
+        }
+    else if(pass!=rpass)
+    {
+        z.style.display="inline";
+        return false;
+    }
+}
+function myfun()
+{
+    x.style.display="none";
+    y.style.display="none";
+    z.style.display="none";
+}
+</script> 
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width= initial-scale=1.0">
+    <title>js-validations</title>
+</head>
+<body>
+<style>
+span{
+    color:red;
+    display:none;
+            }
+ body
+{
+
+height:100vh;
+display:flex;
+justify-content:center;
+align-items: center;
+margin-right:100px;
+}
+
+
+
+.container{
+border:2px solid black;
+width:400px;
+height:400px;
+border-radius: 10px;
+text-align: center;
+display:flex;
+ flex-direction: column;
+align-items:center;
+gap:10px;
+padding: 30px;
+
+
+}
+
+
+.form-row{
+display:flex;
+flex-direction:row;
+gap:10px;
+
+}
+
+label{
+width:100px;
+font-size:20px;
+}
+
+input{
+height:20px;
+ 
+}
+
+input{
+font-size: 10px;
+
+
+}
+
+
+
+
+.submit input{
+width:100px;
+height:30px;
+background-color: blue;
+ color:white;
+ border-radius: 10px;
+
+}
+
+
+h2 {
+position:relative;
+bottom: 270px;
+left:300px;
+
+
+
+}
+
+
+
+
+ </style>
+ <h2>js-validations</h2>
+    <form method="post" class="container">
+        <div class="form-row">
+<label>username</label>
+<input type="text" name="uname" id="uname" placeholder="Enter your Name" onkeypress="myfun()"></div>
+<span id="X">please enter user name b\w 8 to 12 chars only</span><br>
+<div class="form-row">
+<label>email</label>
+<input type="email" name="email" id="email" placeholder="Enter Your Email" onkeypress="myfun()"></div>
+<span id="Y">please enter email</span><br>
+<div class="form-row">
+<label>Gender</label>
+<input type="radio" name="male" id="male" onchange="myfun()">male 
+<input type="radio" name="female" id="female" onchange="myfun()">female</div>
+<span id="Z">please select one</span><br>
+<div class="form-row">
+<label>phone no</label>
+<input type="phone number" name="ph.number" id="ph.number" onkeypress="myfun()"></div>
+<span id="A">please enter 10 digit number</span><br>
+<div class="form-row">
+<label>password</label>
+<input type="password" name="pwd" id="pwd" onkeypress="myfun()"></div>
+<span id="B">please password b\w 6 to 12 chars only</span><br>
+<div class="form-row">
+<label>re-password</label>
+<input type="password" name="rpwd" id="rpwd" onkeypress="myfun()"></div>
+<span id="C">password and repassword mismatch</span><br>
+<div class="submit">
+<input type="submit" onclick="return valid()"></div>
+</form>
+
+<script>
+var x=document.getElementById("X");
+var y=document.getElementById("Y");
+var z=document.getElementById("Z");
+var a=document.getElementById("A");
+var b=document.getElementById("B");
+var c=document.getElementById("C");
+
+function valid()
+{
+var user=document.getElementById("uname").value;
+var email=document.getElementById("email").value;
+var male=document.getElementById("male").checked;
+var female=document.getElementById("female").checked;
+var phone=document.getElementById("ph.number").value;
+var password=document.getElementById("pwd").value;
+var repassword=document.getElementById("rpwd").value;
+
+
+if(user.length<8 || user.length>12){
+
+X.style.display="inline";
+return false;
+
+
+}
+
+else if (email.includes("@")){
+Y.style.display="inline";
+return false;
+
+}
+
+else if (!male && !female){
+Z.style.display="inline";
+return false;
+
+}
+
+else if (phone.length!=10){
+A.style.display="inline";
+return false;
+
+}
+
+
+else if (password.length<6 || password.length>12){
+B.style.display="inline";
+return false;
+
+}
+
+else if (password!=repassword){
+C.style.display="inline";
+return false;
+
+}
+
+
+}
+
+function myfun()
+{
+X.style.display="none";
+Y.style.display="none";
+Z.style.display="none";
+A.style.display="none";
+B.style.display="none";
+C.style.display="none";
+
+
+}
+
+
+</script>
+
+</body>
+
+</html>
